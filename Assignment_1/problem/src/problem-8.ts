@@ -4,7 +4,7 @@
         age:number,
         email: string
     }
-    const validateKeys = <T extends object>(obj: T, keys:(keyof T)[]):boolean =>{
+    const validateKeys = <T extends Tperson>(obj: T, keys:(keyof T)[]):boolean =>{
        
         for (const key of keys) {
             if (!(key in obj)) {
