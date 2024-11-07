@@ -65,6 +65,36 @@ function makeNoise(animal: Dog | Cat) {
 ```
 Use Case: Use instanceof when you’re dealing with multiple classes, and you want to perform specific actions based on the class type. For example, handling different actions for dogs and cats based on their respective classes.
 
+### 3. Custom Type Guards with in Operator
 
+The in operator is used to check if a property exists in an object. This is useful with objects that have specific properties unique to their types.
+
+**Example:**
+
+```typescript
+
+type Bird = { fly: () => void };
+type Fish = { swim: () => void };
+
+function move(animal: Bird | Fish) {
+  if ("fly" in animal) {
+    animal.fly(); // TypeScript understands `animal` is a Bird here
+  } else {
+    animal.swim(); // TypeScript understands `animal` is a Fish here
+  }
+}
+```
+Use Case: Use the in operator when working with object types that have specific properties. This is especially handy when types share some properties but have unique properties that set them apart.
+
+## Summary
+
+Type guards are a powerful feature in TypeScript that make it easier to write safe, error-free code by narrowing down types at runtime. To recap:
+
+- `typeof` is best for primitive types.
+- `instanceof` works well with classes.
+- The `in` operator is ideal for objects with unique properties.
+- Custom type guards allow you to create specific type-checking functions.
+
+By using type guards, you can confidently handle variables with multiple types and build more reliable applications. Whether you’re working on a simple project or a large-scale application, type guards will help you write code that’s cleaner, safer, and easier to debug.
 
 
