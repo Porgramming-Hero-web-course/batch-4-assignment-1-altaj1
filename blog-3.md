@@ -36,3 +36,7 @@ function formatValue(value: string | number) {
 }
 
 Use Case: Use the typeof guard when you need to handle different types of primitive values in a single function. For instance, formatting a value differently based on whether it's a string or a number.
+
+
+
+
