@@ -33,8 +33,8 @@ function formatValue(value: string | number) {
   } else {
     return value.toFixed(2); // TypeScript knows `value` is a number here
   }
-}
-
+} 
+```
 Use Case: Use the typeof guard when you need to handle different types of primitive values in a single function. For instance, formatting a value differently based on whether it's a string or a number.
 
 
