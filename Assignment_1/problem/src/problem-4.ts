@@ -26,7 +26,7 @@
     width: 4,
     height: 6,
   };
-  const  result1 =  calculateShapeArea(rectangle);
- const result2 =  calculateShapeArea(circle);
- console.log(result1, result2)
+  const  rectangleArea =  calculateShapeArea(rectangle);
+ const circleArea =  calculateShapeArea(circle);
+ console.log(rectangleArea, circleArea)
 }
