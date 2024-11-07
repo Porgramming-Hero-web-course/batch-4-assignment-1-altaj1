@@ -37,6 +37,34 @@ function formatValue(value: string | number) {
 ```
 Use Case: Use the typeof guard when you need to handle different types of primitive values in a single function. For instance, formatting a value differently based on whether it's a string or a number.
 
+### 2. instanceof Type Guard
+The instanceof operator checks if an object is an instance of a specific class. This is helpful when working with class-based objects.
+
+**Example:**
+
+```typescript
+class Dog {
+  bark() {
+    console.log("Woof!");
+  }
+}
+
+class Cat {
+  meow() {
+    console.log("Meow!");
+  }
+}
+
+function makeNoise(animal: Dog | Cat) {
+  if (animal instanceof Dog) {
+    animal.bark(); // TypeScript knows `animal` is a Dog here
+  } else {
+    animal.meow(); // TypeScript knows `animal` is a Cat here
+  }
+}
+```
+Use Case: Use instanceof when you’re dealing with multiple classes, and you want to perform specific actions based on the class type. For example, handling different actions for dogs and cats based on their respective classes.
+
 
 
 
